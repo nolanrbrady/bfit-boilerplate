@@ -4,6 +4,7 @@ import { StackNavigator, TabNavigator, TabBarBottom, HeaderBackButton } from 're
 import styles from './Styles/NavigationStyles';
 import images from '../Themes/Images';
 import colors from '../Themes/Colors';
+import HeaderBackIcon from '../Components/HeaderBackIcon.js';
 // Load pages in here
 import LoginScreen from '../Screens/Auth/login.js';
 import HomePage from '../Screens/MainApp/home.js';
@@ -22,7 +23,7 @@ const commonNavigationOptions = ({navigation}) => {
 		fontWeight: '200'
 	},
   headerStyle: styles.commonHeaderStylesLight,
-  //headerLeft: <HeaderBackIcon navigation={navigation} />,
+//   headerLeft: <HeaderBackIcon navigation={navigation} />,
   // This empty headerRight View is required to get the header text centered.
   // See: https://github.com/react-navigation/react-navigation/issues/544#issuecomment-298618209
   headerRight: <View />,
@@ -83,10 +84,10 @@ const AppStack = StackNavigator({
 		 alignSelf:'center',
 		 fontWeight: '300'
 		},
-		 headerStyle: styles.commonHeaderStyles,
-		//  headerLeft: <HeaderBackIcon navigation={navigation} />,
-		 headerTintColor: colors.white,
-		 headerTitleStyle: {
+		headerStyle: styles.commonHeaderStyles,
+		headerLeft: <HeaderBackIcon navigation={navigation} />,
+		headerTintColor: colors.white,
+		headerTitleStyle: {
 			flex: 1,
 			textAlign: 'center',
 			alignSelf: 'center',
@@ -98,10 +99,6 @@ const AppStack = StackNavigator({
 	
  const PrimaryNav = StackNavigator(
 	 {
-	 // Should probably make a splash screen to show, while waiting to see
-	 // whether the user is already logged on, and redirect from there to either
-	 // the AuthStack or the AppStack, depending.
-		 // AuthLoading: {screen: AuthLoadingScreen},
 		App: { screen: AppStack },
 		Auth: { screen: AuthStack },
 	 },{

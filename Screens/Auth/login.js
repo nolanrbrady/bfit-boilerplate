@@ -10,8 +10,9 @@ import {
 } from 'react-native';
 import HomePage from '../MainApp/home.js';
 import ApplicationStyles from '../../Themes/ApplicationStyles.js';
-import { customText } from '../../Themes/Fonts.js';
+import Fonts, { customText } from '../../Themes/Fonts.js';
 import colors from '../../Themes/Colors'
+import fonts from '../../Themes/Fonts.js';
 //import { module as userModule} from "../../store.js";
 //import { connectStore } from 'redux-box';
 
@@ -40,6 +41,9 @@ class LoginScreen extends Component {
     render(){
         return(
             <View style={styles.container}>
+            <View style={{paddingBottom: 45}}>
+                <Text style={styles.title}>b<Text style={{fontWeight: "800"}}>FIT</Text> Boilerplate</Text>
+            </View>
                 <KeyboardAvoidingView behavior='padding' enabled style={styles.forgotPassword}>
                     <TextInput
                         placeholder={"Username"}
@@ -52,6 +56,9 @@ class LoginScreen extends Component {
                             style={styles.input}/>
                         <TouchableOpacity style={styles.button} onPress={() => this.toAppStack()}>
                             <Text style={styles.btnText}>LOGIN</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => this.props.navigation.navigate('CreateAccount')}>
+                            <Text style={styles.ghostBtnText}>Create An Account</Text>
                         </TouchableOpacity>
                 </KeyboardAvoidingView>
             </View>

@@ -184,7 +184,8 @@ btnText: {
 },
 ghostBtnText: {
     color: 'white',
-    fontSize: 16,
+	fontSize: 16,
+	marginTop: 15,
 	fontWeight: "600",
 	fontStyle: "normal",
 	letterSpacing: 0,
@@ -216,77 +217,11 @@ flatListIcon: {
 	borderWidth: 1,
 	borderColor: 'red',
 },
-workoutIcon: {
-	height: 15,
-	width: 15,
-	alignContent: 'flex-start',
-},
-left50: {
-	paddingLeft: 10,
-	alignContent: 'flex-start',
-	width: width * .48,
-},
-right50: {
-	paddingRight: 10,
-	alignItems: 'flex-end',
-	width: width * .48,
-},
-workoutDropDown: {
-	borderWidth: 1,
-	borderColor: Colors.dark,
-	backgroundColor: Colors.darkGreyBlue,
-	flexDirection: 'row',
-	flexWrap: 'wrap',
-	width: width,
-	height: 'auto',
-	alignItems: 'center',
-	minHeight: 55,
-	paddingTop: 5,
-},
-stepsInfo: {
-	flexDirection: 'row',
-	backgroundColor: Colors.darkGreyBlue,
-	flexWrap: 'wrap',
-	paddingTop: 20,
-	paddingBottom: 10,
-	marginTop: -1,
-	//display: 'none'
-},
-swipeEdit: {
-	backgroundColor: '#5b6c83',
-	justifyContent: 'center',
-	alignContent: 'center',
-	alignItems: 'center',
-	height: 54,
-},
-swipeDelete: {
-	backgroundColor: '#d0021b',
-	justifyContent: 'center',
-	alignContent: 'center',
-	alignItems: 'center',
-	height: 54,
-},
-swipeText: {
-	fontSize: 10,
-	fontWeight: "500",
-	fontStyle: "normal",
-	lineHeight: 16,
-	letterSpacing: 0,
-	textAlign: "center",
-	color: Colors.white
-},
-ghostFlatList: {
-	borderWidth: 1,
-	minHeight: 52,
-	width: width,
-	borderBottomColor: Colors.darkGreyBlue,
-	borderTopColor: Colors.darkGreyBlue,
-	backgroundColor: 'transparent',
-	justifyContent: 'space-around',
-	alignContent: 'center',
-	alignItems: 'center',
-
-},
+title: {
+	fontSize: 30,
+	fontWeight: "200",
+	color: Colors.snow
+}
 }
 
 export default ApplicationStyles
