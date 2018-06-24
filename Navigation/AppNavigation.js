@@ -56,7 +56,7 @@ const AuthStack = StackNavigator({
  
  
 const AppTabNavigator = TabNavigator({
-	UserDash: { screen: DashboardStack },
+	UserDash: { screen: HomePage },
 	SecondTab: { screen: UserDash }
 }, {
   tabBarComponent: TabBarBottom,
@@ -84,7 +84,7 @@ const AppStack = StackNavigator({
 		 fontWeight: '300'
 		},
 		 headerStyle: styles.commonHeaderStyles,
-		 //headerLeft: <HeaderBackIcon navigation={navigation} />,
+		//  headerLeft: <HeaderBackIcon navigation={navigation} />,
 		 headerTintColor: colors.white,
 		 headerTitleStyle: {
 			flex: 1,

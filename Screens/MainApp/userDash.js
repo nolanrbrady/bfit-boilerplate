@@ -4,11 +4,12 @@ import {
     Text, 
     View,
     Dimensions,
-    TouchableOpacity
+    Image
 } from 'react-native';
 import HomePage from '../MainApp/home.js';
 import ApplicationStyles from '../../Themes/ApplicationStyles.js';
 import { customText } from '../../Themes/Fonts.js';
+import images from '../../Themes/Images.js';
 //import { module as userModule} from "../../store.js";
 //import { connectStore } from 'redux-box';
 
@@ -19,9 +20,15 @@ const { height, width } = Dimensions.get("window");
 // 	user: userModule, // receives user as a prop
 // })
 class UserDash extends Component {
-    static navigationOptions = {
-		title: 'Second Tab',
-		};
+    static navigationOptions = ({ navigation }) => ({
+        title: 'Second Tab',
+        headerLeft: (
+        <Text>Test</Text>
+    ),
+        tabBarIcon: ({ focused }) => (
+            <Image source={focused ? images.secondTabFocused : images.secondTabGray} />
+        )
+    });
     constructor(props) {
 		super(props);
 		this.state = {

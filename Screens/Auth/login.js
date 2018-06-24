@@ -40,7 +40,7 @@ class LoginScreen extends Component {
     render(){
         return(
             <View style={styles.container}>
-                <KeyboardAvoidingView behavior='postion' enabled style={styles.forgotPassword}>
+                <KeyboardAvoidingView behavior='padding' enabled style={styles.forgotPassword}>
                     <TextInput
                         placeholder={"Username"}
                         onChangeText={(email) => this.setState({email})}
