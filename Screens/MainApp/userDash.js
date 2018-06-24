@@ -10,15 +10,15 @@ import HomePage from '../MainApp/home.js';
 import ApplicationStyles from '../../Themes/ApplicationStyles.js';
 import { customText } from '../../Themes/Fonts.js';
 import images from '../../Themes/Images.js';
-//import { module as userModule} from "../../store.js";
-//import { connectStore } from 'redux-box';
+import { module as userModule} from '../../Store/user.js';
+import { connectStore } from 'redux-box';
 
 
 const { height, width } = Dimensions.get("window");
 
-// @connectStore({
-// 	user: userModule, // receives user as a prop
-// })
+@connectStore({
+	user: userModule, // receives user as a prop
+})
 class UserDash extends Component {
     static navigationOptions = ({ navigation }) => ({
         title: 'Second Tab',

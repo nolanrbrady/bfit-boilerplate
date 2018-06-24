@@ -7,8 +7,8 @@ import {
 import { call, put } from "redux-saga/effects";
  
 const state = {
-  name: '',
-  age: '',
+  name: 'Test user',
+  age: '22',
 };
  
 const actions = createActions({
@@ -27,12 +27,12 @@ const sagas = createSagas({
 
       /*
 
-      WRITE LOGIC TO SYNC THE DB HERE
+      WRITE LOGIC TO SYNC WITH THE DB HERE
       
       */
 
 		} catch(e) {
-			console.log(e);
+			console.log("User Store Sync DB Error: ", e);
 		}
 	},
 });

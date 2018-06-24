@@ -6,7 +6,12 @@ import {
     Image
 } from 'react-native';
 import images from '../../Themes/Images.js';
+import { module as userModule} from '../../Store/user.js';
+import { connectStore } from 'redux-box';
 
+@connectStore({
+	user: userModule, // receives user as a prop
+})
 class HomePage extends Component {
     static navigationOptions = ({ navigation }) => ({
         title: 'User Dash',
