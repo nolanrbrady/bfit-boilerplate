@@ -164,18 +164,19 @@ const ApplicationStyles = {
   },
   button: {
     width: .75 * width,
-    height: 50,
+    height: 44,
     marginTop: 5,
     borderRadius: 44.5,
     backgroundColor: "white",
-    justifyContent: 'center',
+	justifyContent: 'center',
+	marginTop: 20
 },
 btnText: {
     textAlign: 'center',
     justifyContent: 'center',
     alignContent: 'center',
     backgroundColor: 'transparent',
-    fontSize: 20,
+    fontSize: 17,
     fontWeight: "600",
     fontStyle: "normal",
     letterSpacing: 0,

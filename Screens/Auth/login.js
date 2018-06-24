@@ -5,7 +5,8 @@ import {
     View,
     Dimensions,
     TouchableOpacity,
-    TextInput
+    TextInput,
+    KeyboardAvoidingView,
 } from 'react-native';
 import HomePage from '../MainApp/home.js';
 import ApplicationStyles from '../../Themes/ApplicationStyles.js';
@@ -27,7 +28,7 @@ class LoginScreen extends Component {
     constructor(props) {
 		super(props);
 		this.state = {
-			username: 'Email',
+			email: 'Email',
 			password: 'Password'
 		}
     }
@@ -39,15 +40,20 @@ class LoginScreen extends Component {
     render(){
         return(
             <View style={styles.container}>
-                <Text>Login Screen</Text>
-                <View style={styles.forgotPassword}>
-                <TextInput
-                    placeholder={"Username"}
-                    value={this.state.username}/>
-					<TouchableOpacity onPress={() => this.toAppStack()}>
-						<Text>FORGOT PASSWORD?</Text>
-					</TouchableOpacity>
-				</View>
+                <KeyboardAvoidingView behavior='postion' enabled style={styles.forgotPassword}>
+                    <TextInput
+                        placeholder={"Username"}
+                        onChangeText={(email) => this.setState({email})}
+                        style={styles.input}/>
+                        <TextInput
+                            placeholder={"Password"}
+                            onChangeText={(password) => this.setState({password})}
+                            secureTextEntry={true}
+                            style={styles.input}/>
+                        <TouchableOpacity style={styles.button} onPress={() => this.toAppStack()}>
+                            <Text style={styles.btnText}>LOGIN</Text>
+                        </TouchableOpacity>
+                </KeyboardAvoidingView>
             </View>
         )
     }

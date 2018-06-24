@@ -20,7 +20,7 @@ const { height, width } = Dimensions.get("window");
 // })
 class UserDash extends Component {
     static navigationOptions = {
-		title: 'Log In',
+		title: 'Second Tab',
 		};
     constructor(props) {
 		super(props);
